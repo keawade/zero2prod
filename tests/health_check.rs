@@ -1,6 +1,6 @@
 use sqlx::{Connection, PgConnection};
 use std::net::TcpListener;
-use zero2prod::{startup::run, configuration::get_configuration};
+use zero2prod::{configuration::get_configuration, startup::run};
 
 fn spawn_app() -> String {
     let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind a random port.");
